@@ -6,6 +6,9 @@ exports.handler = async (event) => {
 
     console.log("Request received");
 
+    // Define bucket
+    let bucket = "ac-file-share-staging"
+
     // Extract file content
     let fileContent = event.isBase64Encoded ? Buffer.from(event.body, 'base64') : event.body;
 
@@ -21,7 +24,7 @@ exports.handler = async (event) => {
     // Upload the file to S3
     try {
         let data = await s3.putObject({
-            Bucket: "ac-file-share-staging",
+            Bucket: bucket,
             Key: fullFileName,
             Body: fileContent,
             ServerSideEncryption: "AES256",
@@ -30,7 +33,7 @@ exports.handler = async (event) => {
         }).promise();
 
         console.log("Successfully uploaded file", fullFileName);
-        return "Successfully uploaded";
+        return "Successfully uploaded to https://", bucket, ".s3.amazonaws.com/", fullFileName;
 
     } catch (err) {
         console.log("Failed to upload file", fullFileName, err);

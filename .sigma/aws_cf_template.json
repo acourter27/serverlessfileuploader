@@ -120,25 +120,7 @@
               }
             }
           ]
-        },
-        "Policies": [
-          {
-            "PolicyName": "ServerlessFileUploaderPolicy",
-            "PolicyDocument": {
-              "Version": "2012-10-17",
-              "Statement": [
-                {
-                  "Effect": "Allow",
-                  "Action": [
-                    "s3:PutObject",
-                    "s3:PutObjectAcl"
-                  ],
-                  "Resource": "arn:aws:s3:::ac-file-share-staging/*"
-                }
-              ]
-            }
-          }
-        ]
+        }
       }
     },
     "httpApigFileUploaderAPIIntegrationServerlessFileUploader": {
