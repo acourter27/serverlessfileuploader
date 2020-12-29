@@ -24,7 +24,7 @@ exports.handler = async (event) => {
     // Upload the file to S3
     try {
         let data = await s3.putObject({
-            Bucket: bucket,
+            Bucket: "ac-file-share-staging",
             Key: fullFileName,
             Body: fileContent,
             ServerSideEncryption: "AES256",
