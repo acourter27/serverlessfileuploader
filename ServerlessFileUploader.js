@@ -24,6 +24,8 @@ exports.handler = async (event) => {
             Bucket: "ac-file-share-staging",
             Key: fullFileName,
             Body: fileContent,
+            ServerSideEncryption: "AES256",
+            ACL: "public-read",
             Metadata: {}
         }).promise();
 
