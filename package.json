@@ -1,0 +1,8 @@
+{
+  "name": "ServerlessFileUploader",
+  "version": "1.0.0",
+  "dependencies": {
+    "mime-types": "2.1.27"
+  },
+  "devDependencies": {}
+}
