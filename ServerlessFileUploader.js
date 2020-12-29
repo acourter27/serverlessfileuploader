@@ -33,7 +33,7 @@ exports.handler = async (event) => {
         }).promise();
 
         console.log("Successfully uploaded file", fullFileName);
-        return ["Successfully uploaded to https://", bucket, ".s3.amazonaws.com/", fullFileName];
+        return ["Successfully uploaded to https://"&bucket&".s3.amazonaws.com/"&fullFileName];
 
     } catch (err) {
         console.log("Failed to upload file", fullFileName, err);
