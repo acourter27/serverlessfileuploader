@@ -12,7 +12,7 @@
         "filePath": "ServerlessFileUploader.js",
         "cursor": {
           "lineNumber": 36,
-          "column": 95
+          "column": 87
         },
         "config": {
           "runtime": "nodejs10.x",
@@ -101,7 +101,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1609264557524
+    "lastSave": 1609264647615
   },
   "VCS_STATE": {
     "provider": "GitHub",
